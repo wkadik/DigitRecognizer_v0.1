@@ -63,6 +63,3 @@ def l():
         np.savetxt(f"weights_v2_2/weights_0_1({i}).txt", weights_0_1)
         np.savetxt(f"weights_v2_2/weights_1_2({i}).txt", weights_1_2)
 
-z = 150
-weights_0_1 = np.loadtxt(f"weights_v2_2/weights_0_1({z}).txt")
-weights_1_2 = np.loadtxt(f"weights_v2_2/weights_1_2({z}).txt")

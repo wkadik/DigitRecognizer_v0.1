@@ -1,3 +1,7 @@
+import numpy as np
+from tensorflow.keras.datasets import mnist
+from module_neuro_Maths import *
+
 def n(j):
 
     inp = transform_mat_in_vec(x_test[j])
@@ -12,6 +16,10 @@ def n(j):
     error = layer_2_delta ** 2
     sum_error_test = sum(error[0])
     print(f"target: {y_test[j]} pred: {layer_2[0]} er: {sum_error_test}")
+
+z = 150
+weights_0_1 = np.loadtxt(f"weights_v2_2/weights_0_1({z}).txt")
+weights_1_2 = np.loadtxt(f"weights_v2_2/weights_1_2({z}).txt")
 
 for i in range(30):
     n(i)
